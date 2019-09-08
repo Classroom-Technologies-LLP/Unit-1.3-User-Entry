@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     
     @IBAction func runButtonTapped(_ sender: Any) {
-        if let text = textField.text {
-            print(text)
+        if let text = textField.text, let name = nameField.text {
+            print("\(text), \(name)")
         }
     }
     override func viewDidLoad() {
